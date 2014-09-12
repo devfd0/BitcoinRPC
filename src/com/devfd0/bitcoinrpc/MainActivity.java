@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
 	    verConexions =  (TextView)findViewById(R.id.TextView02);
 	    verFecha = (TextView)findViewById(R.id.TextView03);
 	    verServidor = (TextView)findViewById(R.id.TextView06);
-		Actualizar = (Button)findViewById(R.id.button1);
+		Actualizar = (Button)findViewById(R.id.cancelarEnvio);
 		ini = new ConfiguracionFile("ini",this.getApplicationContext());
 		cargarDatos();
 		

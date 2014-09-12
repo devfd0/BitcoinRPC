@@ -102,7 +102,7 @@
     android:layout_marginTop="30dip"    
 	>
 <Button
-    android:id="@+id/button1"       
+    android:id="@+id/cancelarEnvio"       
     android:layout_span="2"
     android:layout_marginRight="80dip"
     android:layout_marginLeft="10dip"

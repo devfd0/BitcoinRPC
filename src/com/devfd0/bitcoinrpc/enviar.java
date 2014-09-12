@@ -2,18 +2,26 @@ package com.devfd0.bitcoinrpc;
 
 
 
+
+
 import com.devfd0.bitcoinrpc.cobj.ErrorTipo;
 import com.devfd0.bitcoinrpc.cobj.Rerror;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
+
 public class enviar  extends Activity{
+
+	
 	Button enviar = null;
 	Button cancelar = null;
+	Button camara = null;
 	SendAsyncClass a = null;
 	View dialogo = null;
 	EditText direccion = null;
@@ -25,15 +33,17 @@ public class enviar  extends Activity{
 protected void onCreate(Bundle savedInstanceState) {
 	// TODO Auto-generated method stub
 	instance = this;
-	super.onCreate(savedInstanceState);
+	super.onCreate(savedInstanceState);	
 	setContentView(R.layout.enviar);
+	camara = (Button)findViewById(R.id.button3);
 	enviar = (Button)findViewById(R.id.button2);
-	cancelar = (Button)findViewById(R.id.button1);
+	cancelar = (Button)findViewById(R.id.cancelarEnvio);
 	dialogo = (View)findViewById(R.id.textoDialogo);
 	direccion = (EditText)findViewById(R.id.editText1);
 	cantidad = (EditText)findViewById(R.id.editText4);
 	comentario = (EditText)findViewById(R.id.editText2);
 	comentariopara = (EditText)findViewById(R.id.editTextNumber);
+
 	
 	enviar.setOnClickListener(new View.OnClickListener() {
 				
@@ -50,7 +60,20 @@ protected void onCreate(Bundle savedInstanceState) {
 			
 		}
 	});
+	camara.setOnClickListener(new View.OnClickListener() {
+		
+		public void onClick(View v) {					
+			//llamamos activity cam	        
+			Intent intente = new Intent();
+    		intente.setClass(getApplicationContext(),CameraActivity.class);		
+    		startActivity(intente);
+		}
+	});
 }
+
+
+
+
 void enviarBTC(String d,String c,String com,String cpara){
 	a = new SendAsyncClass(instance,this,d,c,com,cpara);
 	a.execute();	

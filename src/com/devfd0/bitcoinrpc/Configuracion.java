@@ -18,7 +18,7 @@ public class Configuracion extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {			
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.configuracion);		
-			guardar = (Button)findViewById(R.id.button1);
+			guardar = (Button)findViewById(R.id.cancelarEnvio);
 			url = (EditText)findViewById(R.id.editText1);
 			nombre = (EditText)findViewById(R.id.editText2);
 			pass = (EditText)findViewById(R.id.EditTextPass);			

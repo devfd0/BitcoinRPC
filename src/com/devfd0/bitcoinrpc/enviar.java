@@ -16,9 +16,7 @@ import android.widget.EditText;
 
 
 
-public class enviar  extends Activity{
-
-	
+public class enviar  extends Activity{	
 	Button enviar = null;
 	Button cancelar = null;
 	Button camara = null;
@@ -44,6 +42,9 @@ protected void onCreate(Bundle savedInstanceState) {
 	comentario = (EditText)findViewById(R.id.editText2);
 	comentariopara = (EditText)findViewById(R.id.editTextNumber);
 
+
+    
+
 	
 	enviar.setOnClickListener(new View.OnClickListener() {
 				
@@ -65,14 +66,23 @@ protected void onCreate(Bundle savedInstanceState) {
 		public void onClick(View v) {					
 			//llamamos activity cam	        
 			Intent intente = new Intent();
-    		intente.setClass(getApplicationContext(),CameraActivity.class);		
-    		startActivity(intente);
+    		intente.setClass(getApplicationContext(),CameraActivity.class);
+    		String code = "";
+    		intente.putExtra("code", code);
+    		startActivityForResult(intente, 1);
+    		//startActivity(intente);
 		}
 	});
 }
 
 
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+	if (resultCode == RESULT_OK && requestCode == 1) {
+		direccion.setText(data.getExtras().getString("code"));
+	}
+
+}
 
 void enviarBTC(String d,String c,String com,String cpara){
 	a = new SendAsyncClass(instance,this,d,c,com,cpara);

@@ -12,8 +12,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
-        android:allowBackup="true"
-        android:debuggable="true"
+        android:allowBackup="true"        
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
@@ -32,7 +31,7 @@
         <activity android:name=".ConfiguracionFile"></activity>
         <activity android:name=".enviar"></activity>
         <activity android:name=".transaccciones"></activity>
-        <activity android:name=".CameraTestActivity"></activity>
+        <activity android:name=".CameraActivity"></activity>
         
     </application>
 

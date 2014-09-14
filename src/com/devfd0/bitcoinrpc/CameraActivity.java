@@ -7,6 +7,7 @@
 package com.devfd0.bitcoinrpc;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -40,7 +41,7 @@ public class CameraActivity extends Activity
 	private Camera mCamera;
     private CameraPreview mPreview;
     private Handler autoFocusHandler;
-
+    String dir = "";    
     TextView scanText;
     Button scanButton;
 
@@ -63,7 +64,7 @@ public class CameraActivity extends Activity
         	Dialogo d = new Dialogo(this,this);
         	d.mostrarDialogoOK("Estado camara", "Camara no disponible");
         	
-        }
+        }                
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         autoFocusHandler = new Handler();
@@ -148,8 +149,11 @@ public class CameraActivity extends Activity
                     
                     SymbolSet syms = scanner.getResults();
                     for (Symbol sym : syms) {
-                        scanText.setText("barcode result " + sym.getData());
+                    	dir = sym.getData();
+                        //scanText.setText("barcode result " + sym.getData());                        
                         barcodeScanned = true;
+                        
+                        finish();
                     }
                 }
             }
@@ -161,4 +165,13 @@ public class CameraActivity extends Activity
                 autoFocusHandler.postDelayed(doAutoFocus, 1000);
             }
         };
+        @Override
+        public void finish() {
+          // Prepare data intent 
+          Intent data = new Intent();
+          data.putExtra("code", dir);          
+          // Activity finished ok, return the data
+          setResult(RESULT_OK, data);
+          super.finish();
+        } 
 }

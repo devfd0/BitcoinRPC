@@ -98,12 +98,12 @@ public class Dialogo {
 
 	}
 	//muestra dialogo con botones ok y cancel y fibixh en ambos
-	void mostrarDialogoSalida(){
+	void mostrarDialogoSalida(String titulo,String mensaje){
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
 
-    	builder.setTitle("Exit");
-    	builder.setMessage("¿Desea salir de la aplicación?");
+    	builder.setTitle(titulo);
+    	builder.setMessage(mensaje);
     	
     	builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 

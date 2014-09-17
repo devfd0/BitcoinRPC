@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		Dialogo d = new Dialogo(this,this);
-		d.mostrarDialogoSalida();
+		d.mostrarDialogoSalida(getString(R.string.salidaTitulo),getString(R.string.salida));
 	}
 	@Override
 	public void finish() {
@@ -168,7 +168,7 @@ public void onActionModeStarted(ActionMode mode) {
 		            return true;
 		        case R.id.salir:
 		        	Dialogo d = new Dialogo(this,this);
-		        	d.mostrarDialogoSalida();
+		        	d.mostrarDialogoSalida(getString(R.string.salidaTitulo),getString(R.string.salida));
 		            return true;	            
 		        default:
 		            return super.onOptionsItemSelected(item);

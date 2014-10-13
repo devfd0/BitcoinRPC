@@ -28,5 +28,13 @@
     <string name="urlSTR">URL</string>
     <string name="userSTR">USER</string>
     <string name="savebuttonSTR">Guardar</string>
+    <string name="camara">Scan QR</string>
+	<string name="camaraScan">Scaneando &#8230;</string>
+	<string name="error">Error</string>
+	<string name="longDireccion">La longitud de la dirección es erronea.</string>
+	<string name="sinrespuesta">Sin respuesta del Servidor.</string>
+	<string name="gDatos">Configuración guardada.</string>
+	<string name="aviso">Aviso</string>
+	<string name="camaraNoDisponible">Camara no disponible</string>     
 
 </resources>

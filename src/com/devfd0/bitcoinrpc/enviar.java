@@ -85,8 +85,16 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 
 void enviarBTC(String d,String c,String com,String cpara){
+	if (d.length()>23)
+	{
 	a = new SendAsyncClass(instance,this,d,c,com,cpara);
-	a.execute();	
+	a.execute();
+	}
+	else
+	{
+		Dialogo dd = new Dialogo(this, this);
+		dd.mostrarDialogoOKNoFinish(getString(R.string.error),getString(R.string.longDireccion));
+	}	
 }
 void cargar(){
 	Dialogo d = new Dialogo(this,this);
@@ -98,7 +106,7 @@ void cargar(){
 		if (a.getStatusCode()=="200") finish();
 	}	
 	else{
-		d.mostrarDialogoOK("No conecta","Sin respuesta del servidor");		
+		d.mostrarDialogoOK(getString(R.string.error),getString(R.string.sinrespuesta));		
 	}
 	
 }

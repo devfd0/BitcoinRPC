@@ -5,8 +5,7 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.TimeZone;import android.content.Context;import android.net.ConnectivityManager;import android.net.NetworkInfo;
 
-public class Utiles {
-	
+public class Utiles {	
 	public static String rellenarcon(String cadena,int numero,char caracter, int modo){//modo 1 rellena por la derecha, distinto por la izquierda
         StringBuffer copia =  new StringBuffer(cadena);
         if (modo==1)
@@ -48,5 +47,5 @@ public class Utiles {
 		sdf.setTimeZone(TimeZone.getTimeZone("GMT-1"));
 		String formattedDate = sdf.format(date);
 		return  formattedDate;
-	}
+	}	
 }

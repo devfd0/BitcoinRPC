@@ -20,6 +20,7 @@ import android.widget.FrameLayout;
 import android.widget.Button;
 
 import android.hardware.Camera;
+import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.AutoFocusCallback;
 import android.hardware.Camera.Parameters;
@@ -58,17 +59,18 @@ public class CameraActivity extends Activity
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.camarascan);
-
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        if (!isCameraAvailable()){
-        	Dialogo d = new Dialogo(this,this);
-        	d.mostrarDialogoOK("Estado camara", "Camara no disponible");
-        	
-        }                
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Dialogo d = new Dialogo(this,this);
+        
 
         autoFocusHandler = new Handler();
         mCamera = getCameraInstance();
+        if (!existeCamara()){
+        	d.mostrarDialogoOK(getString(R.string.aviso), getString(R.string.camaraNoDisponible));
+        }
+        else
+        {
+        	setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         /* Instance barcode scanner */
         scanner = new ImageScanner();
         scanner.setConfig(0, Config.X_DENSITY, 3);
@@ -93,12 +95,43 @@ public class CameraActivity extends Activity
                         mCamera.autoFocus(autoFocusCB);
                     }
                 }
+        
             });
+        }
     }
+    @SuppressWarnings("static-access")
+	public boolean existeCamara(){
+    	if (isCameraAvailable()== false)
+    		return false;    	
 
+		PackageManager packageManager = this.getPackageManager(); 
+		if (!packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+			return false;
+		}		
+        int numCam = 0;
+        numCam =mCamera.getNumberOfCameras(); 
+        if (numCam>0)
+        {
+        	while (numCam > 0) {
+        	       CameraInfo cInfo = new CameraInfo();
+        	       numCam--;
+        	       Camera.getCameraInfo(numCam, cInfo);
+        	       if (cInfo.facing == cInfo.CAMERA_FACING_FRONT) {
+        	    	   return true;
+        	        
+        	       }
+        	}
+        	
+        }
+        else
+        {
+        	return false;
+        }        
+        return true;
+    }
     public boolean isCameraAvailable() {
     	PackageManager pm = getPackageManager();
-    	return pm.hasSystemFeature(PackageManager.FEATURE_CAMERA);
+    		return pm.hasSystemFeature(PackageManager.FEATURE_CAMERA);
     	}
     
     public void onPause() {

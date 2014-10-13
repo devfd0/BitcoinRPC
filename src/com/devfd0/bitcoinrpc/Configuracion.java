@@ -46,7 +46,7 @@ public class Configuracion extends Activity {
 		ini.setValor("pass", pass.getText().toString());
 		ini.setValor("number", number.getText().toString());
 		Dialogo d = new Dialogo(this, this);
-		d.mostrarDialogoOK("Estado", "Datos Guardados");
+		d.mostrarDialogoOK(getString(R.string.aviso), getString(R.string.gDatos));
 	}		
 	
 }

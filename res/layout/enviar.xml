@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <TableRow
         android:id="@+id/tableRow6"
@@ -13,7 +13,9 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/camara" />
+            android:text="@string/camara"
+            android:layout_gravity="center_horizontal"
+            android:layout_span="2" />
 
     </TableRow>
 
@@ -27,7 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lEnviar_a"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_gravity="left" />
 
         <EditText
             android:id="@+id/editText1"
@@ -48,7 +51,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/l_cantidad" />
+            android:text="@string/l_cantidad"
+            android:layout_gravity="left" />
 
         <EditText
             android:id="@+id/editText4"
@@ -68,7 +72,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/l_comentario"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_gravity="left" />
 
         <EditText
             android:id="@+id/editText2"
@@ -88,7 +93,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/l_comentario_para"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_gravity="left" />
 
         <EditText
             android:id="@+id/editTextNumber"

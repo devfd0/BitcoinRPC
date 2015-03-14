@@ -24,7 +24,7 @@ public Object getError() {
 return error;
 }
 
-public void setError(Object error) {
+public void setError(Error e) {
 this.error = error;
 }
 

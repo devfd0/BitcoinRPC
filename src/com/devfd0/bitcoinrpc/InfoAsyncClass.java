@@ -106,17 +106,18 @@ public class InfoAsyncClass extends AsyncTask<Void, String, Boolean> {
 			responseString = responseString.trim();
 			if (responseString!=""){
 				//System.out.println("Respuesta: "+response);
-                if (responseString.contains("error") || responseString.length()<10) {
-                    statusCode = -13;
-                    mensajeError = responseString;
-                }
-                else
-                {
-
+                if (responseString.contains("version")) {
                     Gson gson = new Gson();
                     obj = gson.fromJson(responseString.toString(), Cinfo.class);
                     salida = true;
                     statusCode = 200;
+
+                }
+                else
+                {
+                    statusCode = -13;
+                    mensajeError = responseString;
+
                 }
 			}
 

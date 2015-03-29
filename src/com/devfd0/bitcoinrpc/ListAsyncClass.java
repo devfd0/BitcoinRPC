@@ -96,18 +96,10 @@ public class ListAsyncClass extends AsyncTask<Void, String, Boolean> {
 			String responseString = EntityUtils.toString(response.getEntity());
 			responseString = responseString.trim();
 			if (responseString!=""){
-				 if (responseString.contains("error") || responseString.length()<10)
-                 {
-                     statusCode = -13;
-                     mensajeError = responseString;
-
-                 }
-                else {
-                     Gson gson = new Gson();
+				     Gson gson = new Gson();
                      objSalida = gson.fromJson(responseString.toString(), Lista.class);
                      salida = true;
                      statusCode = 200;
-                 }
 				
 			}
 			else{

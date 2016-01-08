@@ -1,5 +1,5 @@
 Cliente RPC para acceder a tu wallet bitcoin o dogecoin.<br>
-app para Android, compilada con Eclipse.
+app para Android, compilada con Android Studio.
 Utiliza librerias:<br>
 zbar,gson y json.<br>
 

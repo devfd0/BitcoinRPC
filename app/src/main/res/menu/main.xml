@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/Enviar" android:title="Enviar"></item>
+    <item android:id="@+id/lista" android:title="Lista Transacciones"></item>
+    <item android:id="@+id/mconfiguracion" android:title="Configuracion"></item>
+    <item android:id="@+id/salir" android:title="Salir"></item>
+
+</menu>

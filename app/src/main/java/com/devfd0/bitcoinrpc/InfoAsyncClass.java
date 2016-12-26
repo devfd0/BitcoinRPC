@@ -42,17 +42,17 @@ public class InfoAsyncClass extends AsyncTask<Void, String, Boolean> {
 	private static final ProtocolVersion PROTOCOL_VERSION = new ProtocolVersion("HTTP", 1, 0);
 	///
     private Context context;
-    ProgressDialog dialog;
+    private ProgressDialog dialog;
 	private String pass="";
 	private String user="";
 	private String urls="";
 	private HttpURLConnection connection = null;
 	private int statusCode = -2;
 	private String mensajeError = "desconocido";
-	public String solicitarMetodo = "";
+	private String solicitarMetodo = "";
 	//private JSONObject request= null;
 	MainActivity activity;
-	Cinfo obj;
+	private Cinfo obj;
 	String contentType = "application/json-rpc; charset=utf-8";
 	 
 	
@@ -104,11 +104,11 @@ public class InfoAsyncClass extends AsyncTask<Void, String, Boolean> {
 			String responseString = EntityUtils.toString(response.getEntity());
             Log.i("mio",responseString);
 			responseString = responseString.trim();
-			if (responseString!=""){
+			if (responseString.length()>1){
 				//System.out.println("Respuesta: "+response);
                 if (responseString.contains("version")) {
                     Gson gson = new Gson();
-                    obj = gson.fromJson(responseString.toString(), Cinfo.class);
+                    obj = gson.fromJson(responseString, Cinfo.class);
                     salida = true;
                     statusCode = 200;
 
@@ -149,6 +149,7 @@ public class InfoAsyncClass extends AsyncTask<Void, String, Boolean> {
         protected void onPreExecute() {
             dialog.setTitle(context.getText(R.string.waitplease));
             dialog.setMessage(context.getText(R.string.wait));
+			dialog.setCancelable(false);
             dialog.show();
         }
 

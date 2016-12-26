@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout
 	android:id="@+id/muestraVersion"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:orientation="vertical"
-	android:stretchColumns="*"
-	xmlns:android="http://schemas.android.com/apk/res/android">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:stretchColumns="*">
 <TableRow
 	android:id="@+id/tableRow5"
 	android:layout_width="match_parent"
@@ -105,10 +105,8 @@
 <Button
     android:id="@+id/cancelarEnvio"       
     android:layout_span="2"
-    android:layout_marginRight="80dip"
-    android:layout_marginLeft="10dip"
     android:text="@string/bActualizar"
-    android:textSize="30sp"/>
+    android:textSize="25sp"/>
 
 </TableRow>
 </TableLayout>

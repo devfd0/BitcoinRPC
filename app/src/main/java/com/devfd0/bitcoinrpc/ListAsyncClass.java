@@ -34,19 +34,19 @@ public class ListAsyncClass extends AsyncTask<Void, String, Boolean> {
 	private HttpPost request;
 	private static final ProtocolVersion PROTOCOL_VERSION = new ProtocolVersion("HTTP", 1, 0);
     private Context context;
-    ProgressDialog dialog;
+    private ProgressDialog dialog;
 	private String pass="";
 	private String user="";
 	private String urls="";	
 	private int statusCode = -1;
-	public String solicitarMetodo = "";
-	Lista objSalida;
+	private String solicitarMetodo = "";
+	private Lista objSalida;
 	private int n = 8;
 	private String response;
 	private String mensajeError = "Error";
 	transaccciones activity;
 	
-	public ListAsyncClass(Context cxt,transaccciones m) {	
+	ListAsyncClass(Context cxt, transaccciones m) {
 		
         	this.activity=m;
             context = cxt;
@@ -68,7 +68,7 @@ public class ListAsyncClass extends AsyncTask<Void, String, Boolean> {
     		request.addHeader("Authorization", "Basic " + Base64Coder.encodeString(user+":"+pass));
         }
 	
-	protected boolean doJSONRequest(JSONObject jsonRequest) 
+	private boolean doJSONRequest(JSONObject jsonRequest)
 	{
 		// Create HTTP/POST request with a JSON entity containing the request
 		statusCode = -1;
@@ -89,15 +89,15 @@ public class ListAsyncClass extends AsyncTask<Void, String, Boolean> {
 		try
 		{
 			// Execute the request and try to decode the JSON Response
-			long t = System.currentTimeMillis();
+	//		long t = System.currentTimeMillis();
 			HttpResponse response = httpClient.execute(request);
-			t = System.currentTimeMillis() - t;
-			Log.d("json-rpc", "Request time :" + t);
+	//		t = System.currentTimeMillis() - t;
+			//Log.d("json-rpc", "Request time :" + t);
 			String responseString = EntityUtils.toString(response.getEntity());
 			responseString = responseString.trim();
-			if (responseString!=""){
+			if (responseString.length()>1){
 				     Gson gson = new Gson();
-                     objSalida = gson.fromJson(responseString.toString(), Lista.class);
+                     objSalida = gson.fromJson(responseString, Lista.class);
                      salida = true;
                      statusCode = 200;
 				
@@ -140,7 +140,7 @@ public class ListAsyncClass extends AsyncTask<Void, String, Boolean> {
 
         @SuppressWarnings("resource")		@Override
         protected Boolean doInBackground(Void... unused) {
-        	Boolean salida = false;	
+			Boolean salida = false;
       		JSONObject obj = new JSONObject();
   		  LinkedList p = new LinkedList();
   		  p.add("*");

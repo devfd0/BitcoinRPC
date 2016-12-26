@@ -36,7 +36,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	camara = (Button)findViewById(R.id.button3);
 	enviar = (Button)findViewById(R.id.button2);
 	cancelar = (Button)findViewById(R.id.cancelarEnvio);
-	dialogo = (View)findViewById(R.id.textoDialogo);
+	dialogo = findViewById(R.id.textoDialogo);
 	direccion = (EditText)findViewById(R.id.editText1);
 	cantidad = (EditText)findViewById(R.id.editText4);
 	comentario = (EditText)findViewById(R.id.editText2);
@@ -87,8 +87,8 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 void enviarBTC(String d,String c,String com,String cpara){
 	if (d.length()>23)
 	{
-	a = new SendAsyncClass(instance,this,d,c,com,cpara);
-	a.execute();
+		a = new SendAsyncClass(instance,this,d,c,com,cpara);
+		a.execute();
 	}
 	else
 	{
@@ -98,12 +98,12 @@ void enviarBTC(String d,String c,String com,String cpara){
 }
 void cargar(){
 	Dialogo d = new Dialogo(this,this);
-	ErrorTipo e = null;	
+	ErrorTipo e;
 	Rerror r = a.getResponse();
 	if (r!=null){
 		e = r.getError();
 		d.mostrarDialogoOK("Error", e.getMessage());
-		if (a.getStatusCode()=="200") finish();
+		if (a.getStatusCode().contains("200")) finish();
 	}	
 	else{
 		d.mostrarDialogoOK(getString(R.string.error),getString(R.string.sinrespuesta));		

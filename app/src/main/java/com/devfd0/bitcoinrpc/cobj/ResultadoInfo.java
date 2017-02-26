@@ -64,7 +64,9 @@ public class ResultadoInfo{
 	}
 
 	public Double getBalance() {
-	return balance;
+
+			return balance;
+
 	}
 
 	public void setBalance(Double balance) {

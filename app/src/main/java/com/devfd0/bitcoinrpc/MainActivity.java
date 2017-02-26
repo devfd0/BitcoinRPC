@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutionException;
 
 import com.devfd0.bitcoinrpc.cobj.Cinfo;
 import com.devfd0.bitcoinrpc.cobj.ResultadoInfo;
+import com.google.gson.Gson;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,7 +20,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+import static com.devfd0.bitcoinrpc.R.string.error;
+
+public class MainActivity extends Activity  implements AsyncResponse {
 
 	 private static Context context;
 	 private static MainActivity instance;
@@ -30,7 +33,8 @@ public class MainActivity extends Activity {
 	TextView verServidor;
 	Button Actualizar;	
 	ConfiguracionFile ini = null;	
-	InfoAsyncClass a;
+	CCliente a;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -45,7 +49,6 @@ public class MainActivity extends Activity {
 		Actualizar = (Button)findViewById(R.id.cancelarEnvio);
 		ini = new ConfiguracionFile("ini",this.getApplicationContext());
 		cargarDatos();
-		
 		Actualizar.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {			
@@ -99,44 +102,45 @@ public class MainActivity extends Activity {
 	}
 
 	void conectar(){		
-		a = new InfoAsyncClass(instance,this);		
-		a.execute();	
+		a = new CCliente(this,"getinfo","",1);
+		a.delegate = this;
+		a.execute();
+
+
+	}
+	@Override
+	public void onProcessFinish(String result, int id) {
+		if(id == 1){
+            if (result.contains("version")) {
+                Gson gson = new Gson();
+                Cinfo obj= gson.fromJson(result, Cinfo.class);
+                ResultadoInfo ii = obj.getResult();
+                if (ii!=null){
+					if (result.contains(("balance")))
+                        verBalance.setText(ii.getBalance().toString());
+                    verVersion.setText(ii.getVersion().toString());
+                    verConexions.setText(ii.getConnections().toString());
+                    verFecha.setText(getFecha());
+                    guardarDatos();
+                }
+                else
+                {
+                    Dialogo d = new Dialogo(this,this);
+                    d.mostrarDialogoOKNoFinish(getString(R.string.error), result);
+                }
+
+            }
+            else
+            {
+                Dialogo d = new Dialogo(this,this);
+                d.mostrarDialogoOKNoFinish(getString(R.string.error), result);
+            }
+
+
+		}
 	}
 
-	public void cargar(){
-		
-			String error = a.getStatusCode();			
-			Boolean conecto = false;
-			try {
-				conecto = a.get();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ExecutionException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			if (Integer.parseInt(error) == 200)
-			{
-				Cinfo i = a.getInfo();
-				if (conecto && i!=null){	
-						ResultadoInfo ii = i.getResult();
-						if (ii!=null){			
-						verBalance.setText(ii.getBalance().toString());
-						verVersion.setText(ii.getVersion().toString());
-						verConexions.setText(ii.getConnections().toString());
-						verFecha.setText(getFecha());
-						}
-				}		
-						guardarDatos();
-			}
-			else
-			{
-				Dialogo d = new Dialogo(this,this);
-				d.mostrarDialogoOKNoFinish("ERROR", "Error code "+error+" "+ a.getMensajeError());
-			}			
-		
-	}
+
 @Override
 public void onActionModeStarted(ActionMode mode) {
 	cargarDatos();

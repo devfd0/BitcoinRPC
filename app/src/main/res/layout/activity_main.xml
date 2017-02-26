@@ -14,15 +14,17 @@
 	android:orientation="horizontal">
 <TextView
 	android:id="@+id/TextView04"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:text="@string/fecha"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.25"
+	android:layout_width="0dp"/>
 <TextView
 	android:id="@+id/TextView03"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.75"
+	android:layout_width="0dp"/>
 </TableRow>
 <TableRow
 	android:id="@+id/tableRow6"
@@ -32,15 +34,19 @@
 	android:orientation="horizontal">
 <TextView
 	android:id="@+id/TextView05"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:text="@string/nombreServidor"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.25"
+	android:layout_width="0dp"
+	/>
 <TextView
-	android:id="@+id/TextView06"	
-	android:layout_width="match_parent"
+	android:id="@+id/TextView06"
 	android:layout_height="match_parent"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.75"
+	android:layout_width="0dp"
+	/>
 </TableRow>
 <TableRow
 	android:id="@+id/tableRow1"
@@ -50,15 +56,18 @@
 	android:orientation="horizontal">
 <TextView
 	android:id="@+id/textView2"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:text="@string/balance"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.25"
+	android:layout_width="0dp"/>
 <TextView
 	android:id="@+id/muestraBalance"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.75"
+	android:layout_width="0dp"
+	/>
 </TableRow>
 <TableRow
 	android:id="@+id/tableRow2"
@@ -68,15 +77,18 @@
 	android:orientation="horizontal">
 <TextView
 	android:id="@+id/textoDialogo"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:text="@string/version"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.25"
+	android:layout_width="0dp"/>
 <TextView
 	android:id="@+id/TextView01"
-	android:layout_width="match_parent"
+
 	android:layout_height="match_parent"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.75"
+	android:layout_width="0dp"/>
 </TableRow>
 <TableRow
 	android:id="@+id/tableRow3"
@@ -86,15 +98,18 @@
 	android:orientation="horizontal">
 <TextView
 	android:id="@+id/textView3"
-	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:text="@string/conexiones"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.3"
+	android:layout_width="0dp"/>
 <TextView
 	android:id="@+id/TextView02"
-	android:layout_width="match_parent"
+
 	android:layout_height="match_parent"
-	android:textSize="20sp" />
+	android:textSize="20sp"
+	android:layout_weight="0.7"
+	android:layout_width="0dp"/>
 </TableRow>
 <TableRow
 	android:id="@+id/tableRow4"
@@ -106,7 +121,11 @@
     android:id="@+id/cancelarEnvio"       
     android:layout_span="2"
     android:text="@string/bActualizar"
-    android:textSize="25sp"/>
+    android:textSize="25sp"
+	android:textAlignment="center"
+	android:textStyle="normal|bold"
+	android:layout_marginRight="30dp"
+	android:layout_marginLeft="30dp" />
 
 </TableRow>
 </TableLayout>

@@ -5,22 +5,30 @@ package com.devfd0.bitcoinrpc;
 
 
 import com.devfd0.bitcoinrpc.cobj.ErrorTipo;
+import com.devfd0.bitcoinrpc.cobj.Lista;
 import com.devfd0.bitcoinrpc.cobj.Rerror;
+import com.devfd0.bitcoinrpc.cobj.ResultadoTransacciones;
+import com.google.gson.Gson;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
+import java.util.List;
 
 
-
-public class enviar  extends Activity{	
+public class enviar  extends Activity implements AsyncResponse {
 	Button enviar = null;
 	Button cancelar = null;
 	Button camara = null;
-	SendAsyncClass a = null;
+	CCliente a = null;
 	View dialogo = null;
 	EditText direccion = null;
 	EditText cantidad = null;
@@ -87,7 +95,9 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 void enviarBTC(String d,String c,String com,String cpara){
 	if (d.length()>23)
 	{
-		a = new SendAsyncClass(instance,this,d,c,com,cpara);
+		a = new CCliente(this,"sendtoaddress","\\"+d+"\\,"+c+",\\"+com+"\\,\\"+cpara+"\\"+"",3);
+		//(instance,this,d,c,com,cpara);
+		a.delegate = this;
 		a.execute();
 	}
 	else
@@ -96,6 +106,14 @@ void enviarBTC(String d,String c,String com,String cpara){
 		dd.mostrarDialogoOKNoFinish(getString(R.string.error),getString(R.string.longDireccion));
 	}	
 }
+    @Override
+    public void onProcessFinish(String result, int id) {
+        if(id == 3){
+                Dialogo d = new Dialogo(this,this);
+                d.mostrarDialogoOKNoFinish(getString(R.string.error), result);
+        }
+    }
+    /*
 void cargar(){
 	Dialogo d = new Dialogo(this,this);
 	ErrorTipo e;
@@ -110,5 +128,5 @@ void cargar(){
 	}
 	
 }
-
+*/
 }

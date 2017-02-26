@@ -17,7 +17,8 @@
             android:text="@string/configSTR"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_horizontal"
-            android:layout_span="2" />
+            android:layout_span="2"
+            android:textStyle="normal|bold" />
 
     </TableRow>
 
@@ -28,16 +29,20 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:text="@string/urlSTR" />
+            android:text="@string/urlSTR"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"/>
 
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="">
+            android:inputType=""
+            android:layout_weight="0.7"
+            android:layout_width="0dp">
 
        
         </EditText>
@@ -51,16 +56,20 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:text="@string/userSTR" />
+            android:text="@string/userSTR"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"/>
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="" />
+            android:inputType=""
+            android:layout_weight="0.7"
+            android:layout_width="0dp"/>
 
     </TableRow>
 
@@ -71,16 +80,20 @@
 
         <TextView
             android:id="@+id/TextView01"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:text="@string/pass" />
+            android:text="@string/pass"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"/>
 
         <EditText
             android:id="@+id/EditTextPass"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_weight="0.7"
+            android:layout_width="0dp"/>
 
     </TableRow>
 
@@ -93,16 +106,20 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:text="@string/numberTransacctions" />
+            android:text="@string/numberTransacctions"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"/>
 
         <EditText
             android:id="@+id/editTextNumber"
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:layout_weight="0.7"
+            android:layout_width="0dp"/>
 
     </TableRow>
 
@@ -119,7 +136,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/savebuttonSTR"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
 
     </TableRow>
 

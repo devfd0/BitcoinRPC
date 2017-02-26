@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Bitcoin RPC</string>
+    <string name="aviso">Aviso</string>
+    <string name="bActualizar">Actualizar</string>
+    <string name="b_cancelar">Cancelar</string>
+    <string name="b_enviar">Enviar</string>
+    <string name="balance">Balance</string>
+    <string name="camara">Scan QR</string>
+    <string name="camaraNoDisponible">Camara no disponible</string>
+    <string name="camaraScan">Scaneando …</string>
+    <string name="conexiones">Conexiones</string>
+    <string name="configSTR">Configuración</string>
+    <string name="direccionDonar">12dfk91BhndDvBioYbZan1Cy2WL795PLxc</string>
+    <string name="error">Error</string>
+    <string name="fecha">Fecha</string>
+    <string name="gDatos">Configuración guardada.</string>
+    <string name="lEnviar_a">Enviar a:</string>
+    <string name="l_cantidad">Cantidad</string>
+    <string name="l_comentario">Comentario</string>
+    <string name="l_comentario_para">Comentario Para:</string>
+    <string name="longDireccion">La longitud de la dirección es erronea.</string>
+    <string name="nombreServidor">Servidor</string>
+    <string name="numberTransacctions">Numero Transacciones</string>
+    <string name="pass">Password</string>
+    <string name="salida">¿Desea cerrar la aplicación?</string>
+    <string name="salidaTitulo">Exit</string>
+    <string name="savebuttonSTR">Guardar</string>
+    <string name="sinrespuesta">Sin respuesta del Servidor.</string>
+    <string name="title_activity_vprogresoa">Vprogreso</string>
+    <string name="transacciones">Ultimas Transacciones</string>
+    <string name="urlSTR">URL</string>
+    <string name="userSTR">USER</string>
+    <string name="version">Version</string>
+    <string name="wait">Esperando Datos</string>
+    <string name="waitplease">Espere Por Favor</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

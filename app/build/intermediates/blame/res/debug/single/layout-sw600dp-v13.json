@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_main.xml",
+        "source": "/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/res/layout-sw600dp/activity_main.xml"
+    },
+    {
+        "merged": "/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/transacciones.xml",
+        "source": "/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/res/layout-sw600dp/transacciones.xml"
+    }
+]

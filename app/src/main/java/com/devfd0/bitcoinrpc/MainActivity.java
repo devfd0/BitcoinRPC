@@ -46,7 +46,7 @@ public class MainActivity extends Activity  implements AsyncResponse {
 	    verConexions =  (TextView)findViewById(R.id.TextView02);
 	    verFecha = (TextView)findViewById(R.id.TextView03);
 	    verServidor = (TextView)findViewById(R.id.TextView06);
-		Actualizar = (Button)findViewById(R.id.cancelarEnvio);
+		Actualizar = (Button)findViewById(R.id.actualizar);
 		ini = new ConfiguracionFile("ini",this.getApplicationContext());
 		cargarDatos();
 		Actualizar.setOnClickListener(new View.OnClickListener() {
@@ -140,8 +140,13 @@ public class MainActivity extends Activity  implements AsyncResponse {
 		}
 	}
 
+	@Override
+	protected void onResume() {
+		cargarDatos();
+		super.onResume();
+	}
 
-@Override
+	@Override
 public void onActionModeStarted(ActionMode mode) {
 	cargarDatos();
 	//super.onActionModeStarted(mode);

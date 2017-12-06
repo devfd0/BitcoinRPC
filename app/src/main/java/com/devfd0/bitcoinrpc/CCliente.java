@@ -38,7 +38,7 @@ public class CCliente extends AsyncTask<Void, String, String> {
 
 
     //{ "jsonrpc":"2.0","id":"1","method": "listtransactions", "params" : [ "*", 10, 0 ] }
-	//{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }
+	//{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1DuMcLEZjagrvD7e6yHVX9ymh27HE2Lx4D", 0.1, "donation", "seans outpost"] }
     URL url;
     HttpURLConnection connection = null;
     String urlParameters = "";
@@ -73,12 +73,12 @@ public class CCliente extends AsyncTask<Void, String, String> {
 
     String leer(){
         String salida = "";
+        String line = "";
         try {
             //Get Response
             InputStream is = connection.getInputStream();
             connection.setConnectTimeout(50000);
             BufferedReader rd = new BufferedReader(new InputStreamReader(is));
-            String line;
             StringBuffer response = new StringBuffer();
             while((line = rd.readLine()) != null) {
                 response.append(line);
@@ -87,7 +87,7 @@ public class CCliente extends AsyncTask<Void, String, String> {
             rd.close();
             salida= response.toString();
         }catch (Exception e){
-            error=e.getMessage();
+            error="Read Error:"+e.getMessage();
         }
         return salida;
     }
@@ -101,7 +101,7 @@ public class CCliente extends AsyncTask<Void, String, String> {
             wr.close();
             salida = true;
         }catch(Exception e ){
-
+            error="Send Error"+e.getMessage();
         }
         return  salida;
     }
@@ -119,6 +119,7 @@ public class CCliente extends AsyncTask<Void, String, String> {
         try {
             connection = (HttpURLConnection)url.openConnection(Proxy.NO_PROXY);
             connection.setRequestMethod("POST");
+
             connection.setRequestProperty("Content-Type",contentType);
             connection.setRequestProperty("Content-Length", "" + Integer.toString(requestBody.getBytes().length));
             connection.setUseCaches (true);

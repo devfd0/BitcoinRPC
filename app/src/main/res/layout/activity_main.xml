@@ -10,7 +10,7 @@
 	android:id="@+id/tableRow5"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:layout_marginTop="15dip"
+	android:layout_marginTop="15dp"
 	android:orientation="horizontal">
 <TextView
 	android:id="@+id/TextView04"
@@ -118,14 +118,14 @@
     android:layout_marginTop="30dip"    
 	>
 <Button
-    android:id="@+id/cancelarEnvio"       
+    android:id="@+id/actualizar"
     android:layout_span="2"
     android:text="@string/bActualizar"
     android:textSize="25sp"
 	android:textAlignment="center"
 	android:textStyle="normal|bold"
-	android:layout_marginRight="30dp"
-	android:layout_marginLeft="30dp" />
+	android:layout_marginRight="40dp"
+	android:layout_marginLeft="40dp" />
 
 </TableRow>
 </TableLayout>

@@ -3,7 +3,7 @@ package com.devfd0.bitcoinrpc;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 
-import org.json.simple.JSONValue;
+import org.json.*;
 
 public class datoJson implements Serializable{
 	/**12dfk91BhndDvBioYbZan1Cy2WL795PLxc
@@ -25,7 +25,7 @@ public class datoJson implements Serializable{
 		String salida = "";
 		String inicio="\\\""+campo+"\\\":";
 		String fin=",\\";
-		String resultado = JSONValue.escape(response);		
+		String resultado = "";//JSONValue.escape(response);
 		if (resultado.contains(inicio)){
 			int posInicial = resultado.indexOf(inicio) + inicio.length();
 			String temp = resultado.substring(posInicial, resultado.length());
@@ -45,7 +45,7 @@ public class datoJson implements Serializable{
 		String fin=",\\";
 		String resultado = "";
 		int s = 0;
-		resultado = JSONValue.escape(response);		
+		resultado = "";//JSONValue.escape(response);
 		if (resultado.contains(inicio)){
 			int posInicial = resultado.indexOf(inicio) + inicio.length();
 			String temp = resultado.substring(posInicial, resultado.length());
@@ -65,7 +65,7 @@ public class datoJson implements Serializable{
 		String fin=",\\";
 		String resultado = "";
 		double s = 0;
-		resultado = JSONValue.escape(response);		
+		resultado = "";//JSONValue.escape(response);
 		if (resultado.contains(inicio)){
 			int posInicial = resultado.indexOf(inicio) + inicio.length();
 			String temp = resultado.substring(posInicial, resultado.length());
@@ -84,7 +84,7 @@ public class datoJson implements Serializable{
 		String inicio="\\\""+campo+"\\\":";
 		String fin=",\\";
 		String resultado = "";
-		resultado = JSONValue.escape(response);		
+		resultado = "";//JSONValue.escape(response);
 		if (resultado.contains(inicio)){
 			int posInicial = resultado.indexOf(inicio) + inicio.length();
 			String temp = resultado.substring(posInicial, resultado.length());

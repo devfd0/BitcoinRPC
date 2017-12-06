@@ -1,6 +1,12 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml
@@ -9,14 +15,18 @@ ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidMa
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:5:5-30
 		INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml
 		INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:4:5-28
 		INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml
 		INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml
@@ -41,10 +51,10 @@ application
 ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:14:5-36:19
 	android:label
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:17:9-41
-	android:allowBackup
-		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:15:9-35
 	android:icon
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:16:9-45
+	android:allowBackup
+		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:15:9-35
 	android:theme
 		ADDED from /home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/src/main/AndroidManifest.xml:18:9-40
 activity#com.devfd0.bitcoinrpc.MainActivity

@@ -16,7 +16,7 @@ import java.net.URL;
 
 
 
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 
 
 
@@ -96,9 +96,9 @@ public class rpcJson extends AsyncTask<URL, Integer, Boolean>{
 	@SuppressWarnings("unchecked")
 	void solicitarMetodo(String Operacion) throws UnsupportedEncodingException, IOException{
 		OutputStream outputStream;
-    	request.put("method", Operacion);		
-		(outputStream=connection.getOutputStream()).write(request.toJSONString().getBytes("UTF-8"));
-		outputStream.close();
+    	//request.put("method", Operacion);
+		//(outputStream=connection.getOutputStream()).write(request.toJSONString().getBytes("UTF-8"));
+	//	outputStream.close();
 		
 	
 	}

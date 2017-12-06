@@ -1,7 +1,4 @@
-#Sun Feb 26 19:10:43 CET 2017
-base.0=/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2324d83a0e6f7de35a1b2e6b37ea71837832b52c
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a07ccee686447fc68c1fe16331fb54951694d69a/classes.dex
-base.1=/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a07ccee686447fc68c1fe16331fb54951694d69a
-file.0=/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2324d83a0e6f7de35a1b2e6b37ea71837832b52c/classes.dex
+#Fri Jun 16 21:32:31 CEST 2017
+base.0=/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/home/fd0/AndroidStudioProjects/git/BitcoinRPC/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

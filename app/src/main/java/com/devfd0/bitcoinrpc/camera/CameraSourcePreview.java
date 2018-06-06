@@ -1,25 +1,20 @@
 /*
- * Basic no frills app which integrates the ZBar barcode scanner with
- * the camera.
- * 
- * Created by lisah0 on 2012-02-24
+ * Copyright (C) The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-package com.devfd0.bitcoinrpc;
+package com.devfd0.bitcoinrpc.camera;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.os.Handler;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.SurfaceView;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.Manifest;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -33,26 +28,17 @@ import android.view.ViewGroup;
 import com.google.android.gms.common.images.Size;
 
 import java.io.IOException;
-import android.widget.TextView;
-import android.graphics.ImageFormat;
 
-import com.google.android.gms.vision.CameraSource;
-
-import java.io.IOException;
-
-import com.devfd0.bitcoinrpc.camera.CameraSourcePreview;
-
-
-public class CameraActivity extends ViewGroup
-{
+public class CameraSourcePreview extends ViewGroup {
     private static final String TAG = CameraSourcePreview.class.getSimpleName();
+
     private Context mContext;
     private SurfaceView mSurfaceView;
     private boolean mStartRequested;
     private boolean mSurfaceAvailable;
     private CameraSource mCameraSource;
 
-    CameraActivity(Context context, AttributeSet attrs) {
+    public CameraSourcePreview(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mStartRequested = false;

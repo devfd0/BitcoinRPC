@@ -1,4 +1,3 @@
-
 package com.devfd0.bitcoinrpc.cobj;
 import com.google.gson.annotations.Expose;
 
@@ -6,17 +5,17 @@ import com.google.gson.annotations.Expose;
 public class Cinfo {
 
 @Expose
-private ResultadoInfo result;
+private CResultadogetwalletinfo result;
 @Expose
 private Object error;
 @Expose
 private Object id;
 
-public ResultadoInfo getResult() {
+public CResultadogetwalletinfo getResult() {
 return result;
 }
 
-public void setResult(ResultadoInfo result) {
+public void setResult(CResultadogetwalletinfo result) {
 this.result = result;
 }
 

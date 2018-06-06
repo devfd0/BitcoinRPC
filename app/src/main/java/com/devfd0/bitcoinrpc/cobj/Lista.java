@@ -1,6 +1,4 @@
-
 package com.devfd0.bitcoinrpc.cobj;
-
 import java.util.ArrayList;
 import java.util.List;
 

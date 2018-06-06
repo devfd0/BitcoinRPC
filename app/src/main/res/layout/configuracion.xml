@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:stretchColumns="*">
+    android:layout_height="fill_parent" >
 
     <TableRow
         android:id="@+id/tableRow1"
@@ -17,8 +16,7 @@
             android:text="@string/configSTR"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_horizontal"
-            android:layout_span="2"
-            android:textStyle="normal|bold" />
+            android:layout_span="2" />
 
     </TableRow>
 
@@ -29,20 +27,15 @@
 
         <TextView
             android:id="@+id/textView2"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/urlSTR"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:text="@string/urlSTR" />
 
         <EditText
             android:id="@+id/editText1"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType=""
-            android:layout_weight="0.7"
-            android:layout_width="0dp">
+            android:ems="10" >
 
        
         </EditText>
@@ -56,20 +49,16 @@
 
         <TextView
             android:id="@+id/textView3"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/userSTR"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:text="@string/userSTR" />
 
         <EditText
             android:id="@+id/editText2"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType=""
-            android:layout_weight="0.7"
-            android:layout_width="0dp"/>
+            />
 
     </TableRow>
 
@@ -80,20 +69,16 @@
 
         <TextView
             android:id="@+id/TextView01"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pass"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:text="@string/pass" />
 
         <EditText
             android:id="@+id/EditTextPass"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"/>
+            android:inputType="textPassword" />
 
     </TableRow>
 
@@ -106,20 +91,16 @@
 
         <TextView
             android:id="@+id/textView4"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/numberTransacctions"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:text="@string/numberTransacctions" />
 
         <EditText
             android:id="@+id/editTextNumber"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"/>
+            android:inputType="number" />
 
     </TableRow>
 
@@ -136,8 +117,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/savebuttonSTR"
-            android:textSize="28sp"
-            android:textStyle="normal|bold" />
+            android:textSize="30sp" />
 
     </TableRow>
 

@@ -1,6 +1,4 @@
 package com.devfd0.bitcoinrpc.cobj;
-
-
 import com.google.gson.annotations.Expose;
 
 

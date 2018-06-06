@@ -1,10 +1,6 @@
 package com.devfd0.bitcoinrpc;
-
-
 import java.net.Authenticator;
 import java.util.concurrent.ExecutionException;
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;

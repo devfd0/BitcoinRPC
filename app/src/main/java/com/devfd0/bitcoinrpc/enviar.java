@@ -1,9 +1,5 @@
 package com.devfd0.bitcoinrpc;
-
-
-
-
-
+import com.devfd0.bitcoinrpc.barcode.BarcodeCaptureActivity;
 import com.devfd0.bitcoinrpc.cobj.ErrorTipo;
 import com.devfd0.bitcoinrpc.cobj.Lista;
 import com.devfd0.bitcoinrpc.cobj.Rerror;
@@ -74,11 +70,11 @@ protected void onCreate(Bundle savedInstanceState) {
 		public void onClick(View v) {					
 			//llamamos activity cam	        
 			Intent intente = new Intent();
-    		intente.setClass(getApplicationContext(),CameraActivity.class);
+    		//intente.setClass(getApplicationContext(),CameraActivity.class);
+			intente.setClass(getApplicationContext(),BarcodeCaptureActivity.class);
     		String code = "";
     		intente.putExtra("code", code);
     		startActivityForResult(intente, 1);
-    		//startActivity(intente);
 		}
 	});
 }
@@ -86,7 +82,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-	if (resultCode == RESULT_OK && requestCode == 1) {
+	if (requestCode == 1) {
 		direccion.setText(data.getExtras().getString("code"));
 	}
 

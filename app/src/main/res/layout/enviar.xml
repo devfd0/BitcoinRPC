@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="*">
@@ -16,8 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/camara"
             android:layout_gravity="center_horizontal"
-            android:layout_span="2"
-            android:textStyle="normal|bold" />
+            android:layout_span="2" />
 
     </TableRow>
 
@@ -28,22 +28,22 @@
 
         <TextView
             android:id="@+id/textoDialogo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
             android:text="@string/lEnviar_a"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_gravity="left"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:textSize="18sp" />
+        </TableRow>
+        <TableRow>
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_height="wrap_content"
-            android:minWidth="150dp"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"
-            >
-            
-        </EditText>
+            <EditText
+
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </EditText>
 
     </TableRow>
 
@@ -54,19 +54,19 @@
 
         <TextView
             android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/l_cantidad"
             android:layout_gravity="left"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:text="@string/l_cantidad"
+            android:textSize="18sp" />
+        </TableRow>
 
+        <TableRow>
         <EditText
             android:id="@+id/editText4"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"            
-            android:inputType="numberDecimal"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"/>
+            android:inputType="numberDecimal" />
 
     </TableRow>
 
@@ -77,18 +77,19 @@
 
         <TextView
             android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
             android:text="@string/l_comentario"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_gravity="left"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:textSize="18sp" />
+        </TableRow>
 
+        <TableRow>
         <EditText
             android:id="@+id/editText2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"
             />
 
     </TableRow>
@@ -100,18 +101,19 @@
 
         <TextView
             android:id="@+id/textView3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="left"
             android:text="@string/l_comentario_para"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_gravity="left"
-            android:layout_weight="0.3"
-            android:layout_width="0dp"/>
+            android:textSize="18sp" />
+        </TableRow>
 
+        <TableRow>
         <EditText
             android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.7"
-            android:layout_width="0dp"
             />
 
     </TableRow>
@@ -129,18 +131,16 @@
 
             <Button
                 android:id="@+id/cancelarEnvio"
+                android:layout_width="match_parent"
                 android:text="@string/b_cancelar"
-                android:textSize="25sp"
-                android:layout_weight="0.5"
-                android:layout_width="0dp"/>
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
                 android:text="@string/b_enviar"
-                android:textSize="25sp"
-                android:layout_weight="0.5"
-                android:layout_width="0dp"
-                />
+                android:textSize="25sp" />
 
         </TableRow>
 

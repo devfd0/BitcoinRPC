@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
     android:stretchColumns="*">
 
     <TableRow
         android:id="@+id/tableRow6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/button3"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/camara"
             android:layout_gravity="center_horizontal"
-            android:layout_span="2" />
+            android:layout_span="2"
+            android:text="@string/camara"
+            android:textStyle="bold" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textoDialogo"
@@ -34,23 +37,24 @@
             android:text="@string/lEnviar_a"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="18sp" />
-        </TableRow>
-        <TableRow>
+    </TableRow>
 
-            <EditText
+    <TableRow>
 
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+        <EditText
 
-            </EditText>
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </EditText>
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView4"
@@ -59,13 +63,14 @@
             android:layout_gravity="left"
             android:text="@string/l_cantidad"
             android:textSize="18sp" />
-        </TableRow>
+    </TableRow>
 
-        <TableRow>
+    <TableRow>
+
         <EditText
             android:id="@+id/editText4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
     </TableRow>
@@ -73,7 +78,7 @@
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView2"
@@ -83,21 +88,21 @@
             android:text="@string/l_comentario"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="18sp" />
-        </TableRow>
+    </TableRow>
 
-        <TableRow>
+    <TableRow>
+
         <EditText
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView3"
@@ -107,27 +112,27 @@
             android:text="@string/l_comentario_para"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="18sp" />
-        </TableRow>
+    </TableRow>
 
-        <TableRow>
+    <TableRow>
+
         <EditText
             android:id="@+id/editTextNumber"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </TableRow>
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            
-            android:paddingTop="30dip"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="30dip">
 
             <Button
                 android:id="@+id/cancelarEnvio"

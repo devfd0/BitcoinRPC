@@ -7,7 +7,7 @@
     <string name="title_activity_vprogresoa">Vprogreso</string>
     <string name="salidaTitulo">Exit</string>
     <string name="salida">¿Desea cerrar la aplicación?</string>
-    <string name="numberTransacctions">Numero Transacciones</string>
+    <string name="numberTransacctions">Nº Transacciones</string>
     <string name="pass">Password</string>
     <string name="wait">Esperando Datos</string>
     <string name="waitplease">Espere Por Favor</string>
@@ -15,6 +15,7 @@
     <string name="nombreServidor">Servidor</string>
     <string name="version">Version</string>
     <string name="conexiones">Conexiones</string>
+    <string name="walletname">Wallet Name</string>
     <string name="bActualizar">Actualizar</string>
     <string name="direccionDonar">12dfk91BhndDvBioYbZan1Cy2WL795PLxc</string>
     <string name="lEnviar_a">Enviar a:</string>
@@ -40,7 +41,7 @@
     <string name="ok">OK</string>
     <string name="low_storage_error">low_storage_error</string>
     <string name="opciones">Opciones</string>
-
+    <string name="txcount">txcount</string>
 
 
 </resources>

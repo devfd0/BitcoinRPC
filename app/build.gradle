@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.devfd0.bitcoinrpc"
-        minSdkVersion 23
-        targetSdkVersion 26
+        applicationId "rpc.bitcoin.devfd0.bitcoinrpc"
+        minSdkVersion 19
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

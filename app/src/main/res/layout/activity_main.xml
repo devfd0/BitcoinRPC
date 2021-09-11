@@ -99,7 +99,7 @@
 		<TextView
 			android:id="@+id/textView3"
 			android:layout_height="match_parent"
-			android:text="@string/conexiones"
+			android:text="@string/walletname"
 			android:textSize="20sp"
 			android:layout_weight="0.3"
 			android:layout_width="0dp"/>
@@ -110,6 +110,44 @@
 			android:textSize="20sp"
 			android:layout_weight="0.7"
 			android:layout_width="0dp"/>
+	</TableRow>
+	<TableRow
+		android:id="@+id/tableRow31"
+		android:layout_marginTop="10dip"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal">
+		<TextView
+			android:id="@+id/textView31"
+			android:layout_height="match_parent"
+			android:text="@string/txcount"
+			android:textSize="20sp"
+			android:layout_weight="0.3"
+			android:layout_width="0dp"/>
+		<TextView
+			android:id="@+id/TextView021"
+
+			android:layout_height="match_parent"
+			android:textSize="20sp"
+			android:layout_weight="0.7"
+			android:layout_width="0dp"/>
+	</TableRow>
+	<TableRow
+		android:id="@+id/tableRow40"
+		android:layout_marginRight="10dip"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="30dip"
+		>
+		<Button
+			android:id="@+id/config"
+			android:layout_span="2"
+			android:text="Configurar"
+			android:textSize="25sp"
+			android:textAlignment="center"
+			android:textStyle="normal|bold"
+			android:layout_marginRight="40dp"
+			android:layout_marginLeft="40dp" />
+
 	</TableRow>
 	<TableRow
 		android:id="@+id/tableRow4"
